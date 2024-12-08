@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-8^e*2u1opoh$5q+^#)6sl6payn!$-9&0nvx)bi$v63z++i9)eg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS=['https://smart_recipe_recommendation_system.onrender.com']
 
 # Application definition
 
