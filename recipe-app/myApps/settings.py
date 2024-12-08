@@ -81,7 +81,7 @@ DATABASES = {
     # },
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_recipes',  # Replace with your database name
+        'NAME': 'abhinavdewa65$django_recipes',  # Replace with your database name
         'USER': 'abhinavdewa65',  # Replace with your PostgreSQL username
         'PASSWORD': 'Abhi@5696',  # Replace with your PostgreSQL password
         'HOST': 'localhost',  # Or your PostgreSQL server address
