@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 import os
 import sys
 
-path = '/ChefMind/recipe-app'
+path = '/home/abhinavdewa65/ChefMind/recipe-app'
 if path not in sys.path:
  sys.path.append(path)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'allinone.settings'
