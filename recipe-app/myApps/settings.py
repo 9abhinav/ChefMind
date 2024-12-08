@@ -55,7 +55,7 @@ ROOT_URLCONF = 'myApps.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/ChefMind/recipe-app'],  # Ensure this path is correct
+        'DIRS': ['/home/abhinavdewa65/ChefMind/recipe-app'],  # Ensure this path is correct
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
