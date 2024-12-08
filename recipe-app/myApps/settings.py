@@ -80,10 +80,10 @@ DATABASES = {
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # },
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_recipes',  # Replace with your database name
-        'USER': 'postgres',  # Replace with your PostgreSQL username
-        'PASSWORD': 'postgres',  # Replace with your PostgreSQL password
+        'USER': 'abhinavdewa65',  # Replace with your PostgreSQL username
+        'PASSWORD': 'Abhi@5696',  # Replace with your PostgreSQL password
         'HOST': 'localhost',  # Or your PostgreSQL server address
         'PORT': '5432',  # Default PostgreSQL port
     }
