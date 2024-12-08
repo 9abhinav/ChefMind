@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8^e*2u1opoh$5q+^#)6sl6payn!$-9&0nvx)bi$v63z++i9)eg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['abhinavdewa65.pythonanywhere.com']
 CSRF_TRUSTED_ORIGINS=['https://smart-recipe-recommendation-system.onrender.com']
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'myApps.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],  # Ensure this path is correct
+        'DIRS': ['/ChefMind/recipe-app'],  # Ensure this path is correct
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
