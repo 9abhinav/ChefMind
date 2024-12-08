@@ -126,8 +126,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# The directory where Django will collect static files for production
-STATIC_ROOT = '/home/abhinavdewa65/ChefMind/recipe-app/recipeApp/static/'
+# The directory where Django will collect all static files
+STATIC_ROOT = '/home/abhinavdewa65/ChefMind/recipe-app/static/'
+
+# Additional directories where Django will look for static files
+STATICFILES_DIRS = [
+    '/home/abhinavdewa65/ChefMind/recipe-app/recipeApp/static/',  # App-specific static files
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
