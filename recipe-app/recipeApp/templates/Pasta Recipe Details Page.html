@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChefMinds - Pasta Recipe</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #343a40;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .step {
+            margin-bottom: 20px;
+        }
+
+        .step h4 {
+            font-size: 1.4em;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        /* Image-Based Section */
+        .images-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Video Section */
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .content {
+                padding: 10px;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            .step h4 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ChefMinds</h1>
+</header>
+
+<div class="content">
+    <h2>How to Make Pasta</h2>
+
+    <!-- Section 1: Text Instructions -->
+    <div class="section text-instructions">
+        <h3>Step-by-Step Instructions</h3>
+        <div class="step">
+            <h4>Step 1: Boil the Pasta</h4>
+            <p>Bring a large pot of salted water to a boil. Add the pasta and cook according to package instructions until al dente. Drain the pasta and set aside.</p>
+        </div>
+        <div class="step">
+            <h4>Step 2: Prepare the Sauce</h4>
+            <p>In a large skillet, heat olive oil over medium heat. Add garlic and cook for 1-2 minutes. Stir in tomatoes and basil, and cook for another 10 minutes.</p>
+        </div>
+        <div class="step">
+            <h4>Step 3: Combine</h4>
+            <p>Toss the pasta with the sauce in the skillet. Season with salt and pepper to taste. Serve with grated Parmesan cheese.</p>
+        </div>
+    </div>
+
+    <!-- Section 2: Image-Based Instructions -->
+    <div class="section images-section">
+        <h3>Step-by-Step Images</h3>
+        <div class="step">
+            <h4>Step 1: Boil the Pasta</h4>
+            <img src="/static/images/pasta_boiling.jpg" alt="Boiling pasta">
+        </div>
+        <div class="step">
+            <h4>Step 2: Prepare the Sauce</h4>
+            <img src="/static/images/pasta_sauce.jpg" alt="Preparing the sauce">
+        </div>
+        <div class="step">
+            <h4>Step 3: Combine</h4>
+            <img src="/static/images/pasta_combining.jpg" alt="Combining pasta with sauce">
+        </div>
+    </div>
+
+    <!-- Section 3: Video Instructions -->
+    <div class="section video-section">
+        <h3>How to Make Pasta (Video)</h3>
+        <video controls>
+            <source src="/static/videos/pasta_recipe.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 ChefMinds</p>
+</footer>
+
+</body>
+</html>

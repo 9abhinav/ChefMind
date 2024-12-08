@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings - ChefMinds</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Profile Settings Page -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm mt-5">
+                    <div class="card-body">
+                        <h1 class="text-center text-warning mb-4">Profile Settings</h1>
+
+                        <form method="POST">
+                            <!-- Cooking Expertise Section -->
+                            <div class="mb-4">
+                                <h3>Cooking Expertise</h3>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="level" value="beginner" id="beginner">
+                                    <label class="form-check-label" for="beginner">Beginner</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="level" value="intermediate" id="intermediate">
+                                    <label class="form-check-label" for="intermediate">Intermediate</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="level" value="advanced" id="advanced">
+                                    <label class="form-check-label" for="advanced">Advanced</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="level" value="professional" id="professional">
+                                    <label class="form-check-label" for="professional">Professional</label>
+                                </div>
+                            </div>
+
+                            <!-- Dietary Preference Section -->
+                            <div class="mb-4">
+                                <h3>Dietary Preference</h3>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="diet" value="vegetarian" id="vegetarian">
+                                    <label class="form-check-label" for="vegetarian">Vegetarian</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="diet" value="vegan" id="vegan">
+                                    <label class="form-check-label" for="vegan">Vegan</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="diet" value="gluten-free" id="gluten-free">
+                                    <label class="form-check-label" for="gluten-free">Gluten-free</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="diet" value="low-carb" id="low-carb">
+                                    <label class="form-check-label" for="low-carb">Low-carb</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="diet" value="high-protein" id="high-protein">
+                                    <label class="form-check-label" for="high-protein">High-protein</label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-warning btn-block">Save Settings</button>
+                        </form>
+
+                        <!-- Logout Link -->
+                        <div class="text-center mt-3">
+                            <a href="{% url 'logout' %}" class="text-warning">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

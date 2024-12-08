@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChefMinds - Search Recipe</title>
+    <!-- Include Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Additional Custom Styles */
+      header {
+        background-color: #343a40;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.8em;
+        letter-spacing: 3px;
+      }
+
+      .banner {
+        background-color: #ffcc80;
+        padding: 40px;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .banner h1 {
+        color: #343a40;
+      }
+
+      .features .card {
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: box-shadow 0.3s;
+      }
+
+      .features .card:hover {
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      }
+
+      .button {
+        background-color: #ff6f61;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1em;
+      }
+
+      .button:hover {
+        background-color: #ff4a3c;
+      }
+
+      footer {
+        background-color: #343a40;
+        color: white;
+        padding: 20px;
+        border-top: 5px solid #ff6f61;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      .equal-height {
+        height: 200px; /* Set a fixed height */
+        overflow: hidden; /* Hide overflow to keep the aspect ratio */
+      }
+      .equal-height img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Cover the area without distortion */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>ChefMinds - Search By Ingredients</h1>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'recipe-search' %}"
+              >Search By Ingredients</a
+            >
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'favorite-recipes' %}"
+              >Favorites</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'profile_settings' %}"
+              >Profile Settings</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container mt-5">
+
+      <!-- Recipe Options -->
+      <div class="mb-2 w-25">
+        <label for="ingredients">Enter ingredients (comma-separated):</label>
+        <form method="get" action="">
+          <div class="d-flex">
+            <input
+              type="text"
+              placeholder="e.g., tomato, cheese"
+              class="form-control"
+              value="{{ query }}"
+              name="ingredients"
+            />
+            <button type="submit" class="btn btn-info ml-2">Search</button>
+            {% if query %}
+            <a href="{% url 'recipe-search' %}" class="btn btn-secondary ml-2">Clear</a>
+            {% endif %}
+          </div>
+        </form>
+      </div>
+      <div class="features row">
+        {% for recipe in recipes %}
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 equal-height">
+            <img
+              src="{{ recipe.image }}"
+              class="card-img-top img-thumbnail"
+              alt="Pasta Recipe"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">{{ recipe.name }}</h5>
+              <p class="card-text">{{ recipe.short_desc }}</p>
+              <a
+                href="{% url 'recipe-details' recipe.id %}"
+                class="btn btn-danger"
+                >View Recipe</a
+              >
+            </div>
+          </div>
+        </div>
+        {% empty %}
+        <li>No recipes available.</li>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+      <p>&copy; 2024 ChefMinds. All rights reserved.</p>
+    </footer>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

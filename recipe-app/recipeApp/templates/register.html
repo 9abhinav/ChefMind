@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ChefMinds</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #FF8C00; /* Orange color */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        a {
+            color: #FF8C00;
+        }
+        a:hover {
+            color: #FF7700;
+        }
+        .errorlist {
+            color: red; /* Make error messages red */
+            padding: 0;
+            margin: 0;
+            list-style-type: none; /* Remove default list styling */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Register Page -->
+    <div class="container">
+        <h1 class="text-center">ChefMinds</h1>
+        <form method="POST">
+            {% csrf_token %}  <!-- CSRF token for security -->
+            <div class="form-group">
+                {{ form.as_p }}  <!-- Render form fields as paragraphs -->
+            </div>
+            <button type="submit" class="btn btn-warning btn-block">Register</button>
+        </form>
+
+        <div class="footer text-center">
+            <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

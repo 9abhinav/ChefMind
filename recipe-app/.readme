@@ -1,0 +1,5 @@
+1. make sure postgres installed.
+  a. db name django_recipes
+2. create tables in db by running - python manage.py migrate (if any model changed then run python manage.py makemigrations  )
+* python manage.py seed_recipes
+3. python manage.py runserver  
